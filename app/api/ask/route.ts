@@ -13,12 +13,6 @@ export async function POST(request: Request) {
     return Response.json({ error: "Jev couldn’t read that context. Please try again." }, { status: 400 })
   }
 
-  const hasGatewayAuth = Boolean(process.env.AI_GATEWAY_API_KEY || process.env.VERCEL_OIDC_TOKEN)
-
-  if (!hasGatewayAuth) {
-    return Response.json({ error: "Jev isn’t connected yet. Add an AI Gateway key or Vercel OIDC token, then try again." }, { status: 503 })
-  }
-
   const state = buildJevState(input)
 
   try {
