@@ -316,7 +316,11 @@ export default function BeerCheck() {
           </div>
         </section>
 
-        <footer className="flex items-center justify-between px-1 pt-4 text-[11px] font-medium text-[#a58d82] sm:px-3 sm:pt-5"><span>Make good choices. Drink water.</span><span className="hidden sm:inline">Not medical advice · Just a vibe check</span></footer>
+        <footer className="grid items-center gap-2 px-1 pt-4 text-[11px] font-medium text-[#a58d82] sm:grid-cols-[1fr_auto_1fr] sm:px-3 sm:pt-5">
+          <span>Make good choices. Drink water.</span>
+          <a href="https://strehl.dev/" target="_blank" rel="noopener noreferrer" className="justify-self-start transition-colors hover:text-[#65182b] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#65182b] sm:justify-self-center">Built by strehl.dev</a>
+          <span className="sm:justify-self-end">Not medical advice · Just a vibe check</span>
+        </footer>
       </div>
     </main>
   )
